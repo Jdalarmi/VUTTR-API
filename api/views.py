@@ -13,7 +13,7 @@ def register(request):
 
     if serializer.is_valid():
         serializer.save()
-        return JsonResponse(serializer.data, status=200)
+        return Response('Ferramenta cadastrada com sucesso!', status=200)
     else:
         return JsonResponse('Metodo nao permitido', status=405)
     
